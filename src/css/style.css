@@ -121,6 +121,85 @@
         font-size: 1.2rem;
     }
 
+    /* Animación de fade-in: de abajo a arriba */
+
+    @keyframes fadeInY {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-inY {
+        animation: fadeInY 1s ease-out forwards;
+    }
+
+    /* Animación de fade-in: de izquierda a derecha */
+
+    @keyframes fade-inx {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      .fade-inx {
+        animation: fade-inx 1s ease-out forwards;
+      }
+      
+    /* Zoom en el hover de imágenes */
+
+    .img-zoom-hover, .img-zoom-hover-category {
+        transition: transform 0.5s ease;
+    }
+
+    .img-zoom-hover:hover, .img-zoom-hover-category:hover {
+        transform: scale(1.05);
+    }
+
+    /* Fade in de texto */
+
+    @keyframes fadeInText {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .text-fade-in {
+        animation: fadeInText 0.8s ease-out forwards;
+      }
+      
+    /* Fade in de texto sin desplazamiento */
+
+    @keyframes fadeInOnly {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      .texto-aparece {
+        opacity: 0;
+        animation: fadeInOnly 1s ease forwards;
+        animation-delay: 0.1s; /* opcional */
+      }
+      
+
 /* Estilos de categoria.html */
 
     /* Swiper */
@@ -199,6 +278,7 @@
         display: inline-block;
         color: #ffffff;
         width: max-content;
+        transition: background-color 0.6s ease;
     }
 
     .boton-producto:hover, .boton-sinfondo:hover {
