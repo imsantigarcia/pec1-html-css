@@ -71,7 +71,14 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-chocolate.jpg" class="imagen-producto" alt="Pastisset de chocolate sobre un plato de madera en una mesa de estilo rústico">
+                                <img src="img/pastisset-chocolate.webp" 
+                                srcset="
+                                img/pastisset-chocolate-400.webp 400w,
+                                img/pastisset-chocolate-700.webp 700w,
+                                img/pastisset-chocolate-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                                class="imagen-producto" alt="Pastisset de chocolate sobre un plato de madera en una mesa de estilo rústico">
                             </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de chocolate</h3>
@@ -86,7 +93,15 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-naranja.jpg" class="imagen-producto" alt="Pastisset de naranja con forma de croissant sobre un plato de madera">
+                                <img 
+                                src="img/pastisset-naranja.webp"
+                                srcset="
+                                img/pastisset-naranja-400.webp 400w,
+                                img/pastisset-naranja-700.webp 700w,
+                                img/pastisset-naranja-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                                class="imagen-producto" alt="Pastisset de naranja con forma de croissant sobre un plato de madera">
                             </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de naranja</h3>
@@ -101,7 +116,14 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-cabello-angel.jpg" class="imagen-producto" alt="Pastisset de cabello de ángel sobre un plato de madera en una mesa de aspecto rústico">
+                                <img src="img/pastisset-cabello-angel.webp"
+                                srcset="
+                                img/pastisset-cabello-angel-400.webp 400w,
+                                img/pastisset-cabello-angel-700.webp 700w,
+                                img/pastisset-cabello-angel-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                                class="imagen-producto" alt="Pastisset de cabello de ángel sobre un plato de madera en una mesa de aspecto rústico">
                             </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de cabello de ángel</h3>
@@ -116,8 +138,16 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-crema.jpg" class="imagen-producto" alt="Pastisset de crema sobre un plato de madera en una mesa de aspecto rústico">
-                            </figure>
+                                <img 
+                                src="img/pastisset-crema-1024.webp" 
+                                srcset="
+                                img/pastisset-crema-400.webp 400w,
+                                img/pastisset-crema-700.webp 700w,
+                                img/pastisset-crema-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                                class="imagen-producto" alt="Pastisset de crema sobre un plato de madera en una mesa de aspecto rústico">
+                        </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de crema</h3>
                             <!--Párrafo-->
@@ -131,7 +161,15 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-lotus.jpg" class="imagen-producto" alt="Pastisset de galleta Lotus sobre un plato de madera en una mesa de aspecto rústico">
+                                <img 
+                                src="img/pastisset-lotus.webp"
+                                srcset="
+                                img/pastisset-lotus-400.webp 400w,
+                                img/pastisset-lotus-700.webp 700w,
+                                img/pastisset-lotus-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                                class="imagen-producto" alt="Pastisset de galleta Lotus sobre un plato de madera en una mesa de aspecto rústico">
                             </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de galleta Lotus</h3>
@@ -146,7 +184,15 @@
                         <article>
                             <!--Imagen-->
                             <figure>
-                                <img src="img/pastisset-cacahuete.jpg" class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico">
+                                <img 
+                                src="img/pastisset-cacahuete.webp" 
+                                srcset="
+                                img/pastisset-cacahuete-400.webp 400w,
+                                img/pastisset-cacahuete-700.webp 700w,
+                                img/pastisset-cacahuete-1024.webp 1024w
+                                "
+                                sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                                class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico">
                             </figure>
                             <!--Header 3-->
                             <h3 class="h3-producto"><span lang="ca">Pastisset</span> de crema de cacahuete</h3>
@@ -166,13 +212,45 @@
                 <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
                 slides-per-view="3">
                     <!--Imagen 1-->
-                    <swiper-slide><img src="img/pastisset-c1.jpg" class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico"></swiper-slide>
+                    <swiper-slide><img 
+                        src="img/pastisset-c1.webp" 
+                        srcset="
+                        img/pastisset-c1-400.webp 400w,
+                        img/pastisset-c1-700.webp 700w,
+                        img/pastisset-c1-1024.webp 1024w
+                        "
+                        sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        class="imagen-producto" alt="Una montaña de pastissets de chocolate"></swiper-slide>
                     <!--Imagen 2-->
-                    <swiper-slide><img src="img/pastisset-c2.jpg" class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico"></swiper-slide>
+                    <swiper-slide><img 
+                        src="img/pastisset-c2.webp"
+                        srcset="
+                        img/pastisset-c2-400.webp 400w,
+                        img/pastisset-c2-700.webp 700w,
+                        img/pastisset-c2-1024.webp 1024w
+                        "
+                        sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        class="imagen-producto" alt="Vaso de leche junto a rollos de canela y chocolate"></swiper-slide>
                     <!--Imagen 3-->
-                    <swiper-slide><img src="img/pastisset-c3.jpg" class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico"></swiper-slide>
+                    <swiper-slide><img 
+                        src="img/pastisset-c3.webp"
+                        srcset="
+                        img/pastisset-c3-400.webp 400w,
+                        img/pastisset-c3-700.webp 700w,
+                        img/pastisset-c3-1024.webp 1024w
+                        "
+                        sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw" 
+                        class="imagen-producto" alt="Pila de pastissets de chocolate en una tienda de dulces"></swiper-slide>
                     <!--Imagen 4-->
-                    <swiper-slide><img src="img/pastisset-c4.jpg" class="imagen-producto" alt="Pastisset de crema cacahuete sobre un plato de madera en una mesa de aspecto rústico"></swiper-slide>
+                    <swiper-slide><img 
+                        src="img/pastisset-c4.webp" 
+                        srcset="
+                        img/pastisset-c4-400.webp 400w,
+                        img/pastisset-c4-700.webp 700w,
+                        img/pastisset-c4-1024.webp 1024w
+                        "
+                        sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        class="imagen-producto" alt="Un hombre con un pastisse entre manos en una cafetería rústica"></swiper-slide>
                 </swiper-container>
             </section>
         </main>
