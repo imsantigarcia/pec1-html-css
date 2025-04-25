@@ -69,7 +69,7 @@
             <section>
                 <h2 class="h2-section-home fade-inx">Las últimas recetas</h2>
                 <!--Pastisset de Kinder-->
-                <div class="receta-mes text-fade-in">
+                <div class="receta-mes girar-derecha">
                     <!--Imagen: izquierda-->
                     <div class="receta-destacada-izquierda">
                         <img 
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <!--Pastisset de Chocolate-->
-                <div class="receta-mes text-fade-in">
+                <div class="receta-mes girar-izquierda">
                     <!--Imagen: izquierda-->
                     <div class="receta-destacada-izquierda">
                         <img 
@@ -102,7 +102,7 @@
                         img/pastisset-chocolate-receta-1024.webp 1024w
                         "
                         sizes="(max-width: 399px) 100vw, (max-width: 900px) 50vw, 33vw" 
-                        alt="Pastisset de chocolate negro fundido sobre un plato y mesa de estilo rústico" class="img-receta-mes">
+                        alt="Pastisset de chocolate negro fundido sobre un plato y mesa de estilo rústico" class="img-receta-mes clip-img">
                     </div>
                     <!--Textos: derecha-->
                     <div class="receta-destacada-derecha">
@@ -164,7 +164,7 @@
                     </li>
                     <!--Producto 3: Pastisset de Crema-->
                     <li class="img-zoom-hover">
-                        <article class="img-zoom-hover text-fade-in">
+                        <article class="text-fade-in">
                             <!--Imagen-->
                             <figure>
                                 <img src="img/pastisset-crema-1024.webp" 
@@ -187,7 +187,30 @@
                     </li>
                 </ul>
             </section>
-        </main>
+
+        <!--Sección de imagen de la semana-->
+        <section class="section-foto">
+            <h2 class="h2-section text-fade-in">La presentación del día</h2>
+            <p class="p-intro text-fade-in">¿A quién no le apetece un desayuno así?</p>
+            <div class=container-foto-destacada>
+                <picture>
+                    <!--Imagen para pantallas mobile-->
+                    <source
+                    srcset="img/originals/bodegon-pastisset-detalle.jpeg"
+                    alt="Fotografía de un desayuno con pastissets"
+                    media="(max-width: 400px)"
+                    class="img-receta-mes">
+
+                    <!--Imagen para pantallas más grandes-->
+                    <img
+                    src="img/originals/bodegon-pastisset.jpg"
+                    alt="Fotografía de un desayuno con pastissets"
+                    class="img-receta-bodegon">
+                </picture>
+            </div>
+        </section>
+    </main>
+
     <!--Footer-->
     <footer>
         <div class="pie">

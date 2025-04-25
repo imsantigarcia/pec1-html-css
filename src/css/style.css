@@ -175,6 +175,30 @@
         animation: fade-inx 1s ease-out forwards;
       }
       
+    /* Zoom y leve rotación a la izquierda */
+
+    .girar-izquierda:hover {
+        transform: scale(1.03) rotateZ(0.5deg);
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 8px 8px 0px #6b42263b;
+    }
+    
+    .girar-izquierda {
+        transition: transform 0.8s ease, box-shadow 0.4s ease;
+    }
+      
+    /* Zoom y leve rotación a la derecha */
+
+    .girar-derecha:hover {
+        transform: scale(1.03) rotateZ(-0.5deg);
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 8px 8px 0px #6b42263b;
+    }
+    
+    .girar-derecha {
+        transition: transform 0.8s ease, box-shadow 0.4s ease;
+    }
+    
     /* Zoom en el hover de imágenes */
 
     .img-zoom-hover, .img-zoom-hover-category {
@@ -261,6 +285,13 @@
         padding: 1.5rem 1.5rem;
         border-radius: 1rem;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08);
+    }
+
+    /* Efecto del estado hover */
+
+    main > section > ul > li article:hover {
+        box-shadow: 0px 8px 16px 0px #6b4226a1;
+        transition: box-shadow 0.3s ease;
     }
 
     /* Imagen de producto */
@@ -511,7 +542,7 @@
             }
         }
 
-/* Inicio */
+/* Estilos de index.html */
 
     /* Ul de los pasissets populares */
 
@@ -602,6 +633,37 @@
         margin-bottom: 3rem;
         padding: 0rem 2rem;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08);
+    }
+
+    /* Section final de la foto */
+
+    .section-foto {
+        margin-top: 2rem;
+    }
+
+    /* Contenedor de la imagen del final */
+
+    .container-foto-destacada {
+        margin-top: 1.5rem;
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        clip-path: polygon(
+            10% 0%, 90% 0%, 100% 10%, 100% 90%,
+            90% 100%, 10% 100%, 0% 90%, 0% 10%
+          ); /* octágono para simular el marco */
+    }
+
+    /* Estilo de la imagen del final */
+
+    .img-receta-bodegon {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        clip-path: polygon(
+            10% 0%, 90% 0%, 100% 10%, 100% 90%,
+            90% 100%, 10% 100%, 0% 90%, 0% 10%
+          );
     }
 
     /* H1 de la home */
