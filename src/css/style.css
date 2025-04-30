@@ -1,4 +1,6 @@
-/* Estilos comunes */
+/* ===================
+   Estilos comunes
+=================== */
 
     /* Tipografía Inter */
     * {
@@ -157,6 +159,10 @@
     .fade-inY {
         animation: fadeInY 1s ease-out forwards;
     }
+    
+/* ===================
+   Animaciones
+=================== */
 
     /* Animación de fade-in: de izquierda a derecha */
 
@@ -174,40 +180,6 @@
       .fade-inx {
         animation: fade-inx 1s ease-out forwards;
       }
-      
-    /* Zoom y leve rotación a la izquierda */
-
-    .girar-izquierda:hover {
-        transform: scale(1.03) rotateZ(0.5deg);
-        transition: transform 0.6s ease, box-shadow 0.4s ease;
-        box-shadow: 0px 8px 8px 0px #6b42263b;
-    }
-    
-    .girar-izquierda {
-        transition: transform 0.8s ease, box-shadow 0.4s ease;
-    }
-      
-    /* Zoom y leve rotación a la derecha */
-
-    .girar-derecha:hover {
-        transform: scale(1.03) rotateZ(-0.5deg);
-        transition: transform 0.6s ease, box-shadow 0.4s ease;
-        box-shadow: 0px 8px 8px 0px #6b42263b;
-    }
-    
-    .girar-derecha {
-        transition: transform 0.8s ease, box-shadow 0.4s ease;
-    }
-    
-    /* Zoom en el hover de imágenes */
-
-    .img-zoom-hover, .img-zoom-hover-category {
-        transition: transform 0.5s ease;
-    }
-
-    .img-zoom-hover:hover, .img-zoom-hover-category:hover {
-        transform: scale(1.05);
-    }
 
     /* Fade in de texto */
 
@@ -242,9 +214,48 @@
         animation: fadeInOnly 1s ease forwards;
         animation-delay: 0.1s; /* opcional */
       }
-      
 
-/* Estilos de categoria.html */
+/* ===================
+   Transiciones
+=================== */
+
+    /* Zoom y leve rotación a la izquierda */
+
+    .girar-izquierda:hover {
+        transform: scale(1.03) rotateZ(0.5deg);
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 8px 8px 0px #6b42263b;
+    }
+    
+    .girar-izquierda {
+        transition: transform 0.8s ease, box-shadow 0.4s ease;
+    }
+      
+    /* Zoom y leve rotación a la derecha */
+
+    .girar-derecha:hover {
+        transform: scale(1.03) rotateZ(-0.5deg);
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
+        box-shadow: 0px 8px 8px 0px #6b42263b;
+    }
+    
+    .girar-derecha {
+        transition: transform 0.8s ease, box-shadow 0.4s ease;
+    }
+    
+    /* Zoom en el hover de imágenes */
+
+    .img-zoom-hover, .img-zoom-hover-category {
+        transition: transform 0.5s ease;
+    }
+
+    .img-zoom-hover:hover, .img-zoom-hover-category:hover {
+        transform: scale(1.05);
+    }      
+
+/* ===================
+   Estilos de categoria.html
+=================== */
 
     /* Swiper */
 
@@ -336,8 +347,11 @@
         background-color: #EAD7B7;
     }
 
-    /* MOBILE */
-    @media (max-width: 399px) {
+    /* ===================
+    Versión móvil pequeño: hasta 400px de ancho
+    =================== */  
+
+    @media (max-width: 400px) {
 
         main > section > ul {
             display: flex;
@@ -361,8 +375,38 @@
 
     }
 
-    /* TABLET */
-    @media (max-width: 900px) {
+    /* ===================
+    Versión móvil grande: hasta 767px de ancho
+    =================== */  
+
+    @media (max-width: 767px) {
+
+        main > section > ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            margin: 1rem 1.5rem;
+        }
+
+        .pie, nav, .ul-menu {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 1rem;
+        }
+
+        .lista-categoria {
+            display: flex;
+        }
+
+    }
+
+    /* ===================
+    Versión tablet: hasta 1023px de ancho
+    =================== */  
+    @media (max-width: 1023px) {
 
         main {
             margin: 1rem 1.5rem;
@@ -371,9 +415,18 @@
         .pie {
             padding: 0;
         }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 1rem;
+        }
     }
 
-/* Estilos de detalle .html */
+/* ===================
+   Estilos de detalle.html
+=================== */
 
     .paso-preparacion {
         background: white;
@@ -512,37 +565,86 @@
         border-radius: 1rem;
     }
 
-        /* MOBILE */
-        @media (max-width: 399px) {
+    /* ===================
+    Versión móvil pequeño: hasta 400px de ancho
+    =================== */  
+    @media (max-width: 400px) {
 
-            .textos-preparacion {
-                flex-direction: column;
-                gap: 1rem;
-            }
+    .botones {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
 
-            .img-preparacion {
-                width: 100%;
-                height: auto;
-            }
+    .textos-preparacion {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-            .pasos-receta {
-                padding-left: 0rem;
-            }
+    .img-preparacion {
+        width: 100%;
+        height: auto;
+    }
+
+    .pasos-receta {
+        padding-left: 0rem;
+    }
     
-            .pasos-receta li:not(:last-child) {
-                margin-bottom: 1rem;
-            }
+    .pasos-receta li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
 
-            .hero-receta {
-                flex-direction: column;
-            }
-
-            .img-destacada {
-                width: 100%;
-            }
+    .hero-receta {
+        flex-direction: column;
         }
 
-/* Estilos de index.html */
+    .img-destacada {
+        width: 100%;
+    }
+        }
+
+    /* ===================
+    Versión móvil grande: hasta 767px de ancho
+    =================== */  
+
+    @media (max-width: 767px) {
+        
+        .textos-preparacion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pasos-receta {
+            margin-top: 1rem;
+            padding-left: 0px;
+        }
+
+        .hero-receta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: flex-start;
+        }
+
+        .botones {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .img-destacada {
+            width: 100%;
+        }
+    }
+
+
+
+/* ===================
+   Estilos de index.html
+=================== */
 
     /* Ul de los pasissets populares */
 
@@ -564,8 +666,24 @@
         border-radius: 1rem;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08);
         align-items: center;
+    
+        /* Animación de fade al cargar */
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.2s ease forwards;
+    
+        /* Transiciones suaves para hover */
+        transition: transform 0.6s ease, box-shadow 0.4s ease;
     }
-
+    
+    /* Animación de fade al cargar */
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+      
     /* H2 de la home */
 
     .h2-section-home {
@@ -681,33 +799,60 @@
         color:#8B5E3B;
     }
     
-            /* MOBILE */
-            @media (max-width: 399px) {
+    /* ===================
+    Versión móvil pequeño: hasta 400px de ancho
+    =================== */  
+    
+    @media (max-width: 400px) {
 
-                .p-abv {
-                    width: 100%;
-                    font-size: 1.3rem;
-                }
+    .p-abv {
+        width: 100%;
+        font-size: 1.3rem;
+    }
 
-                .p-intro {
-                    font-size: 1rem;
-                }
+    .p-intro {
+        font-size: 1rem;
+    }
 
-                .receta-mes {
-                    flex-direction: column;
-                    gap: 1rem;
-                }
+    .receta-mes {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-                .img-receta-mes {
-                    width: 100%;
-                }
+    .img-receta-mes {
+        width: 100%;
+    }
 
-                .receta-destacada-derecha, .receta-destacada-izquierda {
-                    width: 100%;
-                }
-            }
+    .receta-destacada-derecha, .receta-destacada-izquierda {
+        width: 100%;
+        }
+    }
 
-/* Estilos de enlaces.html */
+    /* ===================
+    Versión móvil grande: hasta 767px de ancho
+    =================== */  
+
+    @media (max-width: 767px) {
+
+    .receta-mes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .img-receta-mes {
+        width: 100%;
+    }
+
+    .receta-destacada-derecha, .receta-destacada-izquierda {
+        width: 100%;
+    }
+
+    }
+
+/* ===================
+   Estilos de enlaces.html
+=================== */
 
     /* Container del recurso */
 
