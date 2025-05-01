@@ -63,20 +63,32 @@
                 <div class="hero-receta">
                     <!--Fotografía-->
                     <figure>
-                        <img 
-                        src="img/pastisset-chocolate-receta-400.webp" 
-                        srcset="
-                        img/pastisset-chocolate-receta-400.webp 400w,
-                        img/pastisset-chocolate-receta-550.webp 550w,
-                        img/pastisset-chocolate-receta-900.webp 900w,
-                        img/pastisset-chocolate-receta-1200.webp 1200w,
-                        img/pastisset-chocolate-receta-1600.webp 1600w"
-                        sizes="(max-width: 399px) 100vw, 
-                        (max-width: 549px) 90vw, 
-                        (max-width: 900px) 70vw, 
-                        (max-width: 1200px) 50vw"
-                        alt="Pastisset de chocolate negro relleno sobre un plato y mesa rústica" class="img-destacada">
-                    </figure>    
+                        <picture>
+                          <!-- Imagen responsive por tamaño -->
+                          <source
+                            srcset="
+                              img/pastisset-chocolate-receta-400.webp 400w,
+                              img/pastisset-chocolate-receta-550.webp 550w,
+                              img/pastisset-chocolate-receta-900.webp 900w,
+                              img/pastisset-chocolate-receta-1200.webp 1200w,
+                              img/pastisset-chocolate-receta-1600.webp 1600w"
+                            sizes="(max-width: 399px) 100vw, 
+                                   (max-width: 549px) 90vw, 
+                                   (max-width: 900px) 70vw, 
+                                   (max-width: 1200px) 50vw, 
+                                   800px">
+                      
+                          <!-- Fallback y soporte para pantallas retina -->
+                          <img 
+                            src="img/pastisset-chocolate-receta-900.webp"
+                            srcset="
+                              img/pastisset-chocolate-receta-900.webp 1x,
+                              img/pastisset-chocolate-receta-1600.webp 2x"
+                            alt="Pastisset de chocolate negro relleno sobre un plato y mesa rústica"
+                            class="img-destacada"
+                            loading="lazy">
+                        </picture>
+                      </figure>  
                     <div class="hero-derecha">
                         <!--Texto de introducción-->
                         <h1 class="header1">Receta de <span lang="ca">Pastisset</span> de Chocolate</h1>

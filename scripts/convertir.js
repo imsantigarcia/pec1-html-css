@@ -5,9 +5,10 @@ const path = require('path');
 const inputDir = './img/originals';
 const outputDir = './img/optimized';
 
-const sizes = [400, 550, 900, 1200, 1600];
-
 const validExtensions = ['.jpg', '.jpeg', '.png'];
+
+const baseWidths = [400, 900];
+const scales = [1, 2];
 
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
@@ -15,21 +16,23 @@ if (!fs.existsSync(outputDir)) {
 
 fs.readdirSync(inputDir).forEach(file => {
   const ext = path.extname(file).toLowerCase();
-
   if (!validExtensions.includes(ext)) return;
 
   const inputPath = path.join(inputDir, file);
   const { name } = path.parse(file);
 
-  sizes.forEach(size => {
-    const outputFile = `${name}-${size}.webp`;
-    const outputPath = path.join(outputDir, outputFile);
+  baseWidths.forEach(baseWidth => {
+    scales.forEach(scale => {
+      const width = baseWidth * scale;
+      const outputFile = `${name}-${width}.webp`;
+      const outputPath = path.join(outputDir, outputFile);
 
-    sharp(inputPath)
-      .resize({ width: size })
-      .toFormat('webp', { quality: 100 })
-      .toFile(outputPath)
-      .then(() => console.log(`✅ Generada: ${outputFile}`))
-      .catch(err => console.error(`❌ Error al procesar ${file}:`, err));
+      sharp(inputPath)
+        .resize({ width })
+        .toFormat('webp', { quality: 100 })
+        .toFile(outputPath)
+        .then(() => console.log(`✅ Generada: ${outputFile}`))
+        .catch(err => console.error(`❌ Error al procesar ${file}:`, err));
+    });
   });
 });
