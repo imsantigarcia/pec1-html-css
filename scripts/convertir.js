@@ -2,8 +2,8 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = './img/originals';
-const outputDir = './img/optimized';
+const inputDir = '../img/originals';
+const outputDir = '../img/optimized';
 
 const validExtensions = ['.jpg', '.jpeg', '.png'];
 
