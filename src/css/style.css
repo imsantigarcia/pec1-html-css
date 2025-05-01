@@ -436,6 +436,11 @@
         display: flex;
         flex-direction: column;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .paso-preparacion:hover {
+        box-shadow: 0px 8px 16px 0px #6b42263b;
     }
 
     .textos-preparacion {
@@ -489,6 +494,8 @@
 
     .botones {
         margin-top: 1rem;
+        gap: 2rem;
+        display: flex;
     }
 
     /* Contenedor div de un conjunto de ingredientes */
@@ -671,9 +678,10 @@
         opacity: 0;
         transform: translateY(20px);
         animation: fadeInUp 1.2s ease forwards;
-    
-        /* Transiciones suaves para hover */
-        transition: transform 0.6s ease, box-shadow 0.4s ease;
+    }
+
+    .receta-mes:hover {
+        border: #6B4226 1px solid;
     }
     
     /* Animación de fade al cargar */
@@ -737,21 +745,39 @@
     }
 
     /* Container above the folder */
-
     .abv {
         display: flex;
         flex-direction: column;
         justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra horizontalmente */
+        align-items: center;     /* Centra horizontalmente */
         gap: 1rem;
         background: linear-gradient(to right, #e6d9cf, #ffffff);
         height: 400px;
         border-radius: 1rem;
-        text-align: center; /* Asegura que el texto dentro de los elementos hijos esté centrado */
+        text-align: center;
         margin-bottom: 3rem;
         padding: 0rem 2rem;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.08);
+        animation: fadeIn 0.8s ease-out both;
+        transition: box-shadow 0.3s ease;
     }
+
+    .abv:hover {
+        box-shadow: 0px 8px 8px 0px #6b42263b;
+    }
+    
+    /* Animación al cargar */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(1);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
 
     /* Section final de la foto */
 
