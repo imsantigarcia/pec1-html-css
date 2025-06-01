@@ -2,27 +2,28 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = '../img/originals';    // Carpeta de entrada con imágenes originales
-const outputDir = '../img/optimized';   // Carpeta de salida para imágenes .webp
+const inputDir = '../img/originals';
+const outputDir = '../img/optimized';
 
-// Extensiones válidas
 const validExtensions = ['.jpg', '.jpeg', '.png'];
 
-// Anchos base reales según sizes + sus versiones 2x
-const targetWidths = [304, 430, 480, 608, 675, 860, 960, 1350];
+// Resoluciones necesarias para detalle.html
+const targetWidths = [150, 304];
 
-// Crear carpeta de salida si no existe
+// Solo se procesan estas imágenes
+const includedImages = ['paso-1', 'paso-2', 'paso-3', 'paso-4', 'paso-5', 'ingredientes-pastisset'];
+
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-// Procesar cada imagen
 fs.readdirSync(inputDir).forEach(file => {
   const ext = path.extname(file).toLowerCase();
+  const { name } = path.parse(file);
   if (!validExtensions.includes(ext)) return;
+  if (!includedImages.includes(name)) return;
 
   const inputPath = path.join(inputDir, file);
-  const { name } = path.parse(file);
 
   targetWidths.forEach(width => {
     const outputFile = `${name}-${width}.webp`;
@@ -30,7 +31,7 @@ fs.readdirSync(inputDir).forEach(file => {
 
     sharp(inputPath)
       .resize({ width })
-      .toFormat('webp', { quality: 90 }) // Calidad óptima
+      .toFormat('webp', { quality: 90 })
       .toFile(outputPath)
       .then(() => console.log(`✅ Generada: ${outputFile}`))
       .catch(err => console.error(`❌ Error al procesar ${file}:`, err));
