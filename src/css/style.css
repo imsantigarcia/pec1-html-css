@@ -571,6 +571,38 @@
         border-radius: 1rem;
     }
 
+    /* Youtube Lite */
+
+    .youtube-lite {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    }
+
+    .youtube-lite img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    }
+
+    .youtube-lite button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 60px;
+    text-align: center;
+    }
+
     /* ===================
     Versión móvil pequeño: hasta 400px de ancho
     =================== */  
